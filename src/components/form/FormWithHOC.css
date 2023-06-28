@@ -1,0 +1,70 @@
+.form {
+    margin: 20px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.sortButton {
+    margin-right: 10px;
+    margin-top: 10px;
+    background-color: #4287f5;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sortButton:hover {
+    background-color: #1a5bc9;
+}
+
+.itemList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.item {
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.item:nth-child(even) {
+    background-color: #ebebeb;
+}
+
+.deleteButton {
+    margin-left: 10px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.deleteButton:hover {
+    background-color: #c62828;
+}
+
+.label{
+    min-width: 3.5rem;
+}
+
+.boxInput{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+
+label{
+    margin-right: 8px;
+}
+
+.select{
+    margin-top: 5px;
+}

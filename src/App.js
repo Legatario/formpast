@@ -1,13 +1,19 @@
+import React from "react";
+import FormWithHOC from "./components/form/FormWithHOC";
+import Classes from "./components/class/Classes";
+import "./App.css"
 
-import './App.css';
 
 
-function App() {
+
+const App = () => {
+
   return (
-    <div className="App">
-      oi
+    <div className="container">
+      <FormWithHOC />
+      <Classes />
     </div>
   );
-}
+};
 
-export default App;
+export default App
