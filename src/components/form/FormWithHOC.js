@@ -11,7 +11,8 @@ const FormWithHOC = ({
   handleSubmit,
   itemList,
   sortItems,
-  deleteItem
+  deleteItem,
+  errorMessage
 }) => {
   const { name, email, gender, country } = formValues;
 
@@ -47,7 +48,7 @@ const FormWithHOC = ({
         onChange={handleChange("country")}
       />
       <button type="submit" className="sortButton">Submit</button>
-
+      {errorMessage && <div className="error">{errorMessage}</div>}
       <hr />
 
       <h2>Item List</h2>

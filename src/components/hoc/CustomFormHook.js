@@ -5,10 +5,11 @@ const useCustomFormHook = () => {
     name: "",
     email: "",
     gender: "",
-    country: ""
+    country: "São Paulo"
   });
   const [itemList, setItemList] = useState([]);
   const [itemId, setItemId] = useState(1);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (field) => (event) => {
     setFormValues((prevValues) => ({
@@ -17,17 +18,30 @@ const useCustomFormHook = () => {
     }));
   };
 
+  const displayErrorMessage = (message) => {
+    setErrorMessage(message);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (
+      formValues.name.trim() === "" ||
+      formValues.email.trim() === "" ||
+      formValues.gender.trim() === ""
+    ) {
+      displayErrorMessage("Por favor, preencha todos os campos obrigatórios.")
+      return;
+    }
     const newItem = { ...formValues, id: itemId };
     setItemList((prevItemList) => [...prevItemList, newItem]);
     setFormValues({
       name: "",
       email: "",
       gender: "",
-      country: ""
+      country: "São Paulo"
     });
     setItemId((prevItemId) => prevItemId + 1);
+    setErrorMessage("")
   };
 
   const addItem = (item) => {
@@ -62,7 +76,8 @@ const useCustomFormHook = () => {
     itemList,
     addItem,
     sortItems,
-    deleteItem
+    deleteItem,
+    errorMessage
   };
 };
 

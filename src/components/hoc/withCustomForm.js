@@ -10,7 +10,8 @@ const withCustomForm = (WrappedComponent) => {
       itemList,
       addItem,
       sortItems,
-      deleteItem
+      deleteItem, 
+      errorMessage
     } = useCustomFormHook();
 
     return (
@@ -22,6 +23,7 @@ const withCustomForm = (WrappedComponent) => {
         addItem={addItem}
         sortItems={sortItems}
         deleteItem={deleteItem}
+        errorMessage={errorMessage}
         {...props}
       />
     );
